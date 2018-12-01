@@ -48,7 +48,6 @@
     opacity: 0.4;
   }
   .code.over {
-    border: 2px dashed #000;
     border-top: 2px solid blue;
   }
 

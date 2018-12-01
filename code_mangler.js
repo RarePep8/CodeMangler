@@ -40,4 +40,4 @@ for (var i = 0; i < sample_inout.length; i++) {
      sample_inout[i].output + '</p>';
 }
 var mangled_code = mangle_code(original_code);
-document.getElementById("original code").innerHTML = original_code;
+document.getElementById("original_code").innerHTML = original_code;
