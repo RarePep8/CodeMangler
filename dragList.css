@@ -12,29 +12,30 @@
     list-style-type: none;
   }
   
-  .column {
-    width: 560px;
+  .code {
+    width: 1010px;
     padding-bottom: 5px;
     padding-top: 5px;
     /*text-align: center;*/
     cursor: move;
   }
-  .column header {
+  .code header {
     height: 30px;
-    width: 500px;
+    width: 1000px;
     color: black;
-    background-color: #ccc;
+    background-color: rgb(255, 113, 113);
     padding: 5px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 5px solid rgb(255, 148, 148);
     border-radius: 10px;
-    border: 2px solid #666666;
+    border: 5px solid rgb(255, 148, 148);
+    font-family: "Courier New", Courier, monospace;
   }
   
-  .column.dragElem {
+  .code.dragElem {
     opacity: 0.4;
   }
-  .column.over {
-    //border: 2px dashed #000;
+  .code.over {
+    border: 2px dashed #000;
     border-top: 2px solid blue;
   }
 
