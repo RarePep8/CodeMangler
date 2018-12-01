@@ -16,7 +16,23 @@ function createCodeBlocks(numOfBlocks){
         allText += listOfCodeBlocks[i].text +"\n";
     }
     document.getElementById("test").innerHTML = allText;
-    return allText;
+
+    var input = 1;
+    var vars = {"u":0, "v":0, "w":0, "x":0, "y":0, "z":0};
+    vars["x"] = input;
+    for(var i = 0; i < listOfCodeBlocks.length; i++){
+        var currFunc = listOfCodeBlocks[i].function;
+        var params = listOfCodeBlocks[i].params;
+        var addValue = 0;
+        if(params[1] in vars){
+            addValue = vars[params[1]];
+        }else{
+            addValue = params[1];
+        }
+        vars[params[0]] = currFunc(vars[params[0]], addValue);
+    }
+    output = vars["x"];
+    return {"text":allText, "samples":[{"input":input, "output":output}]};
 }
 
 
@@ -31,6 +47,7 @@ function createArithmeticBlock(varToChangeName, valueName){
 
     return {"text":createdBlockName, "function":function(varToChange,value){return createdBlock(varToChange,value);}, "params":[varToChangeName, valueName]};
 }
+
 
 var list = createCodeBlocks(10);
 
