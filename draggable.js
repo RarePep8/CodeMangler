@@ -71,5 +71,5 @@ function addDnDHandlers(elem) {
 
 }
 
-var cols = document.querySelectorAll('#columns .column');
+var cols = document.querySelectorAll('#mangled_code .code');
 [].forEach.call(cols, addDnDHandlers);
