@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="dragList.css">
 <title>Code Mangler</title>
 </head>
 <body>
@@ -10,6 +11,14 @@
 <p id="test"></p>
 <p id="original code"></p>
 <p id="mangled code"></p>
+<ul id="mangled code">
+    <li class="column" draggable="true"><header>A</header></li>
+    <li class="column" draggable="true"><header>B</header></li>
+    <li class="column" draggable="true"><header>C</header></li>
+    <li class="column" draggable="true"><header>D</header></li>
+    <li class="column" draggable="true"><header>E</header></li>
+</ul>
+      
 <script src="code_generator.js"></script>
 <script src="code_mangler.js"></script>
 </body>

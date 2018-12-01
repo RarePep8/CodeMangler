@@ -8,8 +8,8 @@ function mangle_code(code) {
         temp_var = code_array[i];
         code_array[i] = code_array[swap_to];
         code_array[swap_to] = temp_var;
-        document.write(code_array[i]);
-        document.write("<br>");
+        document.getElementById("mangled code").innerHTML += '<li class="column" draggable="true"><header>' + code_array[i] + '<//header></li>';
+        document.getElementById("mangled code").innerHTML += ("<br>");
     }
 }
 
@@ -34,4 +34,3 @@ function mangle_code(code) {\
 
 var mangled_code = mangle_code(original_code);
 document.getElementById("original code").innerHTML = original_code;
-document.getElementById("mangled code").innerHTML = mangled_code;
