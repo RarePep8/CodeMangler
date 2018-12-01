@@ -11,6 +11,19 @@
   #mangled_code {
     list-style-type: none;
   }
+
+  .in_out {
+    height: 40px;
+    width: 250px;
+    color: black;
+    background-color: rgb(114, 230, 214);
+    padding: 5px;
+    border-bottom: 5px solid rgb(114, 230, 214);
+    border-radius: 10px;
+    border: 5px solid rgb(148, 203, 255);
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
   
   .code {
     width: 1010px;
