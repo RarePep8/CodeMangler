@@ -16,6 +16,7 @@ function createCodeBlocks(numOfBlocks){
         } else if (randomBlockNum < 0.75){
             listOfCodeBlocks.push(createArithmeticBlock(randomVar, randomValue));
         } else{
+            var randomValue = varNames[Math.floor((Math.random() * varNames.length))];
             listOfCodeBlocks.push(createLoopBlock(randomVar, randomValue, Math.floor((Math.random() * 4)+1)));
         }
 
@@ -70,7 +71,7 @@ function createLoopBlock(varToChangeName, valueName, incrementCount){
         }
         return varToChange;
     }
-    var createdBlockName = "for(int i=0; i < " + valueName + "; i++){ " + varToChangeName + "+=" + incrementCount + " ;}";
+    var createdBlockName = "for(var i=0; i < " + valueName + "; i++){ " + varToChangeName + "+=" + incrementCount + " ;}";
     return {"text":createdBlockName, "function":function(varToChange,value){return createdBlock(varToChange,value);}, "params":[varToChangeName, valueName], "output": varToChangeName};
 }
 
