@@ -16,7 +16,7 @@ function createCodeBlocks(numOfBlocks){
         allText += listOfCodeBlocks[i].text +"\n";
     }
     document.getElementById("test").innerHTML = allText;
-    return listOfCodeBlocks;
+    return allText;
 }
 
 
