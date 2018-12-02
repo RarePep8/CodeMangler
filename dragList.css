@@ -43,10 +43,11 @@
     border: 5px solid rgb(255, 148, 148);
     font-family: "Courier New", Courier, monospace;
   }
-  
+  /*
   .code.dragElem {
     opacity: 0.4;
-  }
+  }*/
+
   .code.over {
     border-top: 2px solid blue;
   }

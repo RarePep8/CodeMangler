@@ -9,6 +9,7 @@ function handleDragStart(e) {
 
   this.classList.add('dragElem');
 }
+
 function handleDragOver(e) {
   if (e.preventDefault) {
     e.preventDefault(); // Necessary. Allows us to drop.
@@ -46,7 +47,6 @@ function handleDrop(e) {
     this.insertAdjacentHTML('beforebegin',dropHTML);
     var dropElem = this.previousSibling;
     addDnDHandlers(dropElem);
-    
   }
   this.classList.remove('over');
   return false;
